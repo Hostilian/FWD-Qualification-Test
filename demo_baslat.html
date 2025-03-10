@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWD Yeterlilik Testi Araçları</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            margin: 10px 5px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .btn.primary {
+            background-color: #2ecc71;
+        }
+
+        .btn.primary:hover {
+            background-color: #27ae60;
+        }
+
+        .readme {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>FWD Yeterlilik Testi Araçları</h1>
+
+    <div class="container">
+        <h2>Karakter Tasarım Demosu</h2>
+        <p>Bu basit web uygulaması, FWD Yeterlilik Testi için karakter tasarımı, animasyon ve 3D görselleştirme konseptlerini denemenize yardımcı olur.</p>
+        <a href="index.html" class="btn primary">Karakter Tasarımcısını Aç</a>
+    </div>
+
+    <div class="container">
+        <h2>Rehberler ve Belgeler</h2>
+        <p>Test sürecinde yardımcı olacak tüm rehber ve belgelere buradan ulaşabilirsiniz:</p>
+        <a href="qualification_guide.md" class="btn">Yeterlilik Testi Rehberi</a>
+        <a href="teslim_kontrol_listesi.md" class="btn">Teslim Kontrol Listesi</a>
+        <a href="adim_adim_rehber.md" class="btn">Adım Adım Proje Rehberi</a>
+        <a href="wickeditor_rehberi.md" class="btn">WickEditor Kullanım Rehberi</a>
+        <a href="tinkercad_rehberi.md" class="btn">Tinkercad Kullanım Rehberi</a>
+        <a href="uygulama_rehberi.md" class="btn">Uygulama Kullanım Rehberi</a>
+    </div>
+
+    <div class="container">
+        <h2>Proje Yapısı</h2>
+        <div class="readme">
+            <p>FWD Yeterlilik Testi için önerilen klasör yapısı:</p>
+            <pre>FWD-Qualification
+│
+├── Gorev1-Karakter
+│   ├── baslangic.png
+│   ├── gelistirme.png
+│   └── son.png
+│
+├── Gorev2-Animasyon
+│   └── karakter_360.gif/mp4
+│
+└── Gorev3-3D
+    └── 3d_model.gif/mp4</pre>
+            <p>Tasarım, animasyon ve 3D modelleme çalışmalarınızı bu şekilde düzenli olarak kaydetmeniz önerilir.</p>
+        </div>
+    </div>
+
+    <script>
+        // Bu JavaScript kodu, markdown bağlantılarını düzgün açmak için bir HTML sayfasına yönlendirir
+        document.querySelectorAll('a[href$=".md"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Bu sadece bir demo, gerçekte markdown dosyalarını göstermek için HTML dönüştürme gerekir
+                alert("Bu bir markdown dosyası. Web tarayıcısında doğrudan açılması için HTML formatına dönüştürülmesi gerekir. Lütfen dosyayı bir metin düzenleyicide açın.");
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "application": "FWD Yeterlilik Testi Demo",
+  "version": "1.0.0",
+  "author": "FWD Yeterlilik Testi Adayı",
+  "description": "FWD Yeterlilik Testi'nin görevlerini tamamlamak için yardımcı araçlar ve rehberler",
+  "main": "demo_baslat.html",
+  "dependencies": {
+    "p5.js": "^1.4.0"
+  },
+  "files": [
+    "index.html",
+    "js/character.js",
+    "js/sketch.js",
+    "js/export-helper.js",
+    "demo_baslat.html",
+    "qualification_guide.md",
+    "teslim_kontrol_listesi.md",
+    "adim_adim_rehber.md",
+    "wickeditor_rehberi.md",
+    "tinkercad_rehberi.md",
+    "uygulama_rehberi.md",
+    "run_demo.bat"
+  ],
+  "folders": [
+    "Gorev1",
+    "Gorev2",
+    "Gorev3",
+    "js"
+  ],
+  "instructions": {
+    "start": "run_demo.bat dosyasını çalıştırın veya demo_baslat.html dosyasını bir web tarayıcısında açın",
+    "guides": "Rehber dosyalarını bir metin düzenleyicide açın veya demo uygulaması üzerinden erişin",
+    "submission": "teslim_kontrol_listesi.md dosyasını kullanarak tüm gereklilikleri tamamladığınızdan emin olun"
+  }
+}
