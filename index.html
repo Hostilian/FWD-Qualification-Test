@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Designer & Animator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            width: 800px;
+        }
+        .tabs {
+            display: flex;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .tab {
+            padding: 10px 20px;
+            background-color: #ddd;
+            cursor: pointer;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+        }
+        .tab.active {
+            background-color: #3498db;
+            color: white;
+        }
+        .controls {
+            width: 100%;
+            padding: 10px;
+            background-color: #e0e0e0;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        canvas {
+            border: 1px solid #ccc;
+        }
+        button {
+            margin: 5px;
+            padding: 8px 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        input[type="color"] {
+            margin: 5px;
+            cursor: pointer;
+        }
+        .control-group {
+            margin: 5px 0;
+        }
+        label {
+            margin-right: 10px;
+        }
+        .instructions {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Character Designer & Animator</h1>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="design">Character Design</div>
+            <div class="tab" data-tab="animate">360° Animation</div>
+            <div class="tab" data-tab="3d">3D Visualization</div>
+        </div>
+
+        <div class="controls" id="design-controls">
+            <div class="control-group">
+                <label>Body Shape:</label>
+                <button id="circle-btn">Circle</button>
+                <button id="square-btn">Square</button>
+                <button id="triangle-btn">Triangle</button>
+            </div>
+            <div class="control-group">
+                <label>Color:</label>
+                <input type="color" id="body-color" value="#FF5733">
+                <label>Expression:</label>
+                <button id="happy-btn">Happy</button>
+                <button id="sad-btn">Sad</button>
+                <button id="surprised-btn">Surprised</button>
+            </div>
+            <div class="control-group">
+                <label>Features:</label>
+                <button id="add-hat">Add Hat</button>
+                <button id="add-arms">Add Arms</button>
+                <button id="add-legs">Add Legs</button>
+                <button id="reset">Reset</button>
+                <button id="save">Save Screenshot</button>
+            </div>
+        </div>
+
+        <div class="controls" id="animate-controls" style="display: none;">
+            <div class="control-group">
+                <label>Animation:</label>
+                <button id="start-animation">Start Rotation</button>
+                <button id="stop-animation">Stop</button>
+                <label>Speed:</label>
+                <input type="range" min="1" max="10" value="5" id="speed-slider">
+            </div>
+        </div>
+
+        <div class="controls" id="3d-controls" style="display: none;">
+            <div class="control-group">
+                <label>3D View:</label>
+                <button id="rotate-x">Rotate X</button>
+                <button id="rotate-y">Rotate Y</button>
+                <button id="rotate-z">Rotate Z</button>
+                <button id="auto-rotate">Auto Rotate</button>
+            </div>
+        </div>
+
+        <div id="canvas-container"></div>
+
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <p><strong>Character Design:</strong> Build your character using basic shapes. Add features and change colors to make it unique.</p>
+            <p><strong>Animation:</strong> View and adjust your character's 360° rotation animation.</p>
+            <p><strong>3D View:</strong> See a simplified 3D visualization of your character from different angles.</p>
+        </div>
+    </div>
+
+    <script src="js/character.js"></script>
+    <script src="js/sketch.js"></script>
+</body>
+</html>
